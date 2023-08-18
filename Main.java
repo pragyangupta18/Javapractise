@@ -1,747 +1,180 @@
-/*
-class FirstClass {
+// Basic's
+
+import java.util.Scanner;
+
+public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world with java !");
-        System.out.print("Hello world");
-        System.out.print(" with java !\n");
-        System.out.print("Hello world with java !");
-    }
-}
- print - print in  same line
- println - print in next line
- \n - print in next line
-*/
+        // first progrm in java
+        System.out.println("Hello world!");
+        /* variables
+          water - bucket ,  masala - box , lunch - lunch box
+          same as these we need containers in java which stores data values
+          String - int,float,char,boolean..
+          How to declare variable
+          syntax - <datatype> < variable name > = < value >
+         */
 
+        String name = "pragyan";
+        System.out.println(name);
 
+        int a = 45,x = 56 ;
+        float b = 45.22f ;
+        System.out.println(x);
 
+        boolean isAdult = false;
+        System.out.println(isAdult);
 
- /*
- class FirstPattern {
-    public static void main(String[] args) {
-        System.out.println("*");
-        System.out.println("**");
-        System.out.println("***");
-        System.out.println("****");
-        System.out.println("*****");
-    }
-}
-*/
+        /* rules for constructing names of variable in java
+           can contain digits , underscore , dollar , signs , letters
+           should begin with the letter $ or _ .
+           java is case sensitive language so harry and heavy are diff variable
+           should not contain white spaces
+           you cannot use reserved keywords from java
 
-/*
-class Firstdatatype {
+         */
 
-    // primitive -> byte(8 bits),short,char(2 bits),boolean(1 bits),int(4 bits),
-    //              float(4 bits),long(8 bits),double(8 bits)
+        /*
+        Two types of data types :
+        1. primitive data types  - byte(1 byte), short(2 bytes) , int(4 bytes), long(8 bytes),
+         float (4 bytes) ,  double (8 bytes), boolean(1 bit), char(2 bytes).
 
-    // non - primitive -> String , Array , class , object , interface .
-    public static void main(String[] args) {
-        // Variables
-        int a = 10 ;
-        int b  = 5 ;
-        int diff = a - b ;
-        int Sum = a + b ;
-        int Multiply = a * b ;
-        double price = 25.5 ;
-        String name = "Pragyan";
+        2. Non primitive or reference data types  -
+         */
 
-        System.out.println(a+b);
-        System.out.println(diff);
-        System.out.println(Sum);
-        System.out.println(Multiply);
-
-        // calc left to right
-        //  +,-  <  *,%,/
-
-        //Quiz
-        int ans = a*b / a-b ;
-        int ans1 = (a*b) / (a-b) ;
-
-        System.out.println(ans);
-        System.out.println(ans1);
-    }
-}
-*/
-
-
-
+        byte u = 59 ;
+        double d = 45.343242d;
+        char grade = 'A';
+        System.out.println(u);
+        System.out.println(d);
+        System.out.println(grade);
+//        will not work as out of range
+//        byte u = 159 ;
+//        System.out.println(u);
+//        memory management is automatic , no need to free up space , there is garbage collector.
 
 /*
-import java.util.*;
-class FirstInput {
-    public static void main(String[] args) {
-    Scanner sc = new Scanner(System.in);
-    String name = sc.nextLine();// next funcion prints only 1 word .
-    System.out.println(name);
-    }
-}
-*/
+            operators in java :
+           operand operator operand = result
+              4       +       7     =   11
 
-
-/*
-// Addition of two number
-import java.util.*;
-class FirstInputquest {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter first num : ");
-        int a = sc.nextInt();
-        System.out.print("Enter Second num : ");
-        int b = sc.nextInt();
-        System.out.print("Sum is : ");
-        int sum = a+b;
-        System.out.println(sum);
-    }
-}
-*/
-
-/*
-  //Make a program that takes the radius of a circle as input, calculates its radius
-  //  and area and prints it as output to the user.
-import java.util.*;
-class program {
-    public static void main(String[] args){
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter radius : ");
-        int r = sc.nextInt();
-        double area = 3.14*(r*r);
-        System.out.print("Area of circle is : ");
-        System.out.println(area);
-    }
-}
-*/
-
-
-/*
-import java.util.*;
-class conditionstat {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter the age of the person : ");
-        int age = sc.nextInt();
-        if (age > 18) {
-            System.out.println("Adult");
-        }else{
-            System.out.println("child");
-        }
-    }
-}
-*/
-
-
-/*
-import java.util.*;
-class condstat {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter the number : ");
-        int number = sc.nextInt();
-        if (number % 2 == 0 ) {
-            System.out.println("No. is even");
-        }else{
-            System.out.println("No. is odd");
-        }
-    }
-}
-*/
-
-
-/*
-import java.util.*;
-class condstatement {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter the First number : ");
-        int a = sc.nextInt();
-        System.out.print("Enter the Second number : ");
-        int b = sc.nextInt();
-        if(a == b){
-            System.out.print("Equal");
-        }else{
-            if (a > b) {
-                System.out.print("a is greater");
-            }else{
-                System.out.print("b is greater");
-            }
-        }
-    }
-}
+              Types of Operator in java ;
+              1.Arithmetic operator -> +,-,%,/,*
+              2.Assignment operator -> = , +=( increment the present value of variable ), *= , /= , %= .
+              3.Logical Operator ->
+                && (logical end operator) - returns true if both conditions are true .
+                || (logical or operator)  - returns true if any one conditions is true .
+                ! (Logical not) - from true to false and from false to true .
+              4.Comparison Operator ->  == (check for equality), != , < , > , <= , >= .
  */
+        int num1 = 45 , num2  = 78  ;
+        // For output in diff line  we use println function .
+        System.out.println("The value of num1 + num2 is ");
+        System.out.println(num1+num2);
+        // if we want output in one line then use print function .
+        System.out.print("The value of num1 + num2 is ");
+        System.out.println(num1+num2);
+
+        System.out.print("The value of num1 - num2 is ");
+        System.out.println(num1-num2);
+        System.out.print("The value of num1 * num2 is ");
+        System.out.println(num1*num2);
+        System.out.print("The value of num1 / num2 is ");
+        System.out.println(num1/num2);  // will give integer .
+        System.out.print("The value of num1 % num2 is ");
+        System.out.println(num1%num2);
+        System.out.println(num1++);
+        System.out.println(++num1);// it prints
+        System.out.println(num1--);
+        System.out.println(--num1);// it prints
+      // method overloading - diff methods for diff data types example println(int)  & println (char) .
+
+        // taking user input in java
+        Scanner scan  = new Scanner(System.in);
+        System.out.print("Enter input: ");
+        String input = scan.nextLine();  // will print a line but will print a word if we write scan.next() only
+        // next - wait for white spaces and stop .
+        System.out.println(input);
+
+        // strings
+        String namee = "pragyan ";
+        String channel = " future coder" ;
+        System.out.println(namee.length());
+        System.out.println(namee.toLowerCase());
+        System.out.println(namee.toUpperCase());
+        System.out.println(namee +"from"+ channel);   // concatenation
+        System.out.println(namee +"from \n"+ channel);
+        System.out.println(namee.contains("pra"));  // checking if the str exist in namee .
+        System.out.println(namee.charAt(2)); // tell the character at index .
+        System.out.println(namee.endsWith("an"));
+        System.out.println(namee.indexOf("han ")); // not present so will be -1
+        System.out.println(namee.indexOf("an "));
+        System.out.println(namee.indexOf("an"));
+        System.out.println(namee.hashCode());
+        //A hash code is an integer value that is associated with each object in Java. Its main purpose is to
+        //facilitate hashing in hash tables, which are used by data structures like HashMap
+        System.out.println(namee.getBytes());//Encodes this String into a sequence of bytes using the named charset
+        System.out.println(namee.intern());
+        System.out.println(namee.isEmpty());
+        System.out.println(namee.replace('p','v'));
+        System.out.println(namee.startsWith("p"));
+        System.out.println(namee.trim());//remove white spaces from both sides
+        System.out.println(namee.valueOf("pra")); //Returns the string representation of the specified value
 
 
-/*
-import java.util.*;
-class consta {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter the First number : ");
-        int a = sc.nextInt();
-        System.out.print("Enter the Second number : ");
-        int b = sc.nextInt();
-        if(a == b){
-            System.out.print("Equal");
-        }
-        else if (a > b){
-                System.out.print("a is greater");
-        }
-        else{
-                System.out.print("b is greater");
-        }
+        //  all the string methods to study - https://www.w3schools.com/java/java_ref_string.asp
+        // if we want to put double code as string in output then use backslash i.e  \" . more - \\ , \t , \' , \n etc..
+
+        // all math class methods - https://www.w3schools.com/java/java_ref_math.asp
+        int numm1 = 4 , numm2 = 7 ;
+        System.out.println(Math.max(4,7));
+        System.out.println(Math.min(4,7));
+        System.out.println(Math.sqrt(36));
+        System.out.println(Math.abs(36));// write + ve value or absolute value
+        System.out.println(Math.abs(-36)); // write +ve value or absolute value
+        System.out.println(Math.random());
+        System.out.println(4+(8-4)*Math.random());
+        System.out.println(4+(8-4)*Math.random());   // random no. b\w 4 and 8 .
+        System.out.println(4+(8-4)*Math.random());
+        System.out.println(4+(35-4)*Math.random());   // random no. b\w 4 and 35 .
+        System.out.println(Math.acos(12));
+        System.out.println(Math.acos(-12));   // arccosine value in radians
+        System.out.println(Math.acos(2341132));
+        System.out.println(Math.floor(2.4));
+        System.out.println(Math.floor(2.8));
+        System.out.println(Math.exp(128));
+        System.out.println(Math.exp(5));
+        System.out.println(Math.ceil(23.5));
+        System.out.println(Math.ceil(23.3));
+        System.out.println(Math.ceil(23.8));
+        System.out.println(Math.ceil(84));
+        System.out.println(Math.log(84));
+        System.out.println(Math.log(32));
+        System.out.println(Math.cbrt(27));
+        System.out.println(Math.log10(84));
+        System.out.println(Math.nextUp(84.2));
+        System.out.println(Math.nextUp(84.6));
+        System.out.println(Math.nextUp(84.5));
+        System.out.println(Math.nextUp(84));
+        System.out.println(Math.nextAfter(76,98));
+        System.out.println(Math.nextAfter(98,76));
+        System.out.println(Math.round(98));
+        System.out.println(Math.round(98.56));
+        System.out.println(Math.round(98.23));
+        System.out.println(Math.round(98.50));
+        System.out.println(Math.signum(0.5));
+        System.out.println(Math.sin(0.5));
+        System.out.println(Math.tan(0.5));
+        System.out.println(Math.tanh(0.5));
+        System.out.println(Math.toDegrees(227));
+        System.out.println(Math.toRadians(34));
+
+
+
+
+
+
+
+
+
     }
 }
-*/
-
-/*
-import java.util.*;
-class condstate {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter the button  : ");
-        int button = sc.nextInt();
-        if(button == 1){
-            System.out.print("hi");
-        }
-        else if (button == 2){
-            System.out.print("Hello");
-        }
-        else if (button == 3){
-            System.out.print("Namaste");
-        }
-        else{
-            System.out.println("Invalid Button");
-        }
-    }
-}
-*/
-
-/*
-import java.util.*;
-class switchcase {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter the button  : ");
-        int button = sc.nextInt();
-        switch(button){
-            case 1:
-                System.out.println("hi");
-                break;
-            case 2:
-                System.out.println("hello");
-                break;
-            case 3:
-                System.out.println("Namaste");
-                break;
-            default:
-                System.out.println("Invalid Button");
-        }
-    }
-}
-*/
-
-/*
-class loop {
-    public static void main(String[] args) {
-      for(int counter=0;counter<100;counter=counter+1) {
-          System.out.println("Hello world");
-      }
-    }
-}
-*/
-
-
-
-
-/*
-// 1 to 10 printing with for loop
-class loop {
-    public static void main(String[] args) {
-        for (int counter = 0; counter < 11; counter++) {   // counter++ = Counter + 1
-            System.out.println(counter);
-        }
-    }
-}
- */
-
-
-
-/*
-// 1 to 10 printing with while loop
-class loop {
-    public static void main(String[] args) {
-        int counter = 0 ;
-        while(counter < 11) {   // counter++ = Counter + 1
-            System.out.println(counter);
-            counter++ ;
-        }
-    }
-}
-*/
-
-
-
-/*
-// 1 to 10 printing with do while loop
-class loop {
-    public static void main(String[] args) {
-        int counter = 0 ;
-        do{
-            System.out.println(counter);
-            counter++ ;
-        } while(counter<11);
-    }
-}
-*/
-
-
-/*
-// first n natural number
-import java.util.*;
-class loop {
-    public static void main(String[] args) {
-         Scanner sc = new Scanner(System.in) ;
-        System.out.print("Enter number of the no.'s which should be taken : " );
-         int n = sc.nextInt() ;
-         int sum = 0 ;
-         for(int i=0; i <= n ; i++)
-         {
-             sum = sum + i ;
-         }
-        System.out.print("Sum of the natural no.'s given is : ");
-        System.out.println(sum);
-    }
-}
-*/
-
-
-/*
-//print table of no. input by the user ..
-import java.util.*;
-class loop {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter the number : ");
-        int n = sc.nextInt() ;
-        for(int i = 1 ; i < 11 ; i++) {
-            System.out.println(n*i);
-        }
-    }
-}
-*/
-
-
-
-
-/*
-// string and array declaration -
-String name = new String("Aman");
-        int[] marks = new int[3];
-        marks[0] = 97;
-        marks[1] = 98;
-        marks[2] = 95;
-*/
-
-
-
-
-
-
-
-/*
-
-// Make a calculator
-import java.util.*;
-class program {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter first number : ");
-        int a = sc.nextInt();
-        System.out.print("Enter Second Number : ");
-        int b = sc.nextInt();
-        System.out.print("1 -> Addition \n2 -> Substraction \n3 -> Multiplication
-        \n4 -> Division \n5 -> Modulus \nEnter the function you want to perform : ");
-        int operator = sc.nextInt();
-        switch (operator){
-            case 1 :
-                System.out.println(a+b);
-                break;
-            case 2 :
-                System.out.println(a-b);
-                break;
-            case 3 :
-                System.out.println(a*b);
-                break;
-            case 4 :
-                System.out.println(a/b);
-                break;
-            case 5 :
-                System.out.println(a%b);
-                break;
-            default:
-                System.out.println("Operation Doesn't exist ");
-        }
-    }
-}
-
-*/
-
-
-
-
-/*
-import java.util.*;
-class program {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter the no. to know the month : ");
-        int month = sc.nextInt();
-        switch (month){
-            case 1 :
-                System.out.println("January");
-                break;
-            case 2 :
-                System.out.println("February");
-                break;
-            case 3 :
-                System.out.println("March");
-                break;
-            case 4 :
-                System.out.println("April");
-                break;
-            case 5 :
-                System.out.println("May");
-                break;
-            case 6 :
-                System.out.println("June");
-                break;
-            case 7 :
-                System.out.println("July");
-                break;
-            case 8 :
-                System.out.println("August");
-                break;
-            case 9 :
-                System.out.println("September");
-                break;
-            case 10 :
-                System.out.println("October");
-                break;
-            case 11 :
-                System.out.println("November");
-                break;
-            case 12 :
-                System.out.println("December");
-                break;
-            default:
-                System.out.println("Doesn't denote any of the month ");
-        }
-    }
-}
-*/
-
-
-/*
- Loops syntax ->
-for (initialization; condition; update) {
-        // body of-loop
-        }
-
-        while(condition) {
-        // body of the loop
-        }
-
-
-        do {
-        // body of loop;
-        }
-        while (condition);
-*/
-
-/*
-import java.util.*;
-class program {
-    public static void main(String[] args){
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter the no. till where u wanted to print even number : ");
-        int n = sc.nextInt();
-        for(int i = 1 ;i <= n ; i++){
-            if(i % 2 == 0) {
-                System.out.println(i);
-            }
-        }
-    }
-}
-*/
-
-/*
-import java.util.*;
-class solution {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int input ;
-        do{
-            System.out.print("Enter the marks of the stud : ");
-            int marks = sc.nextInt();
-            if(marks<100 && marks>=90){
-                System.out.println("Excellent");
-            } else if (marks>50 && marks<=90)
-            {
-                System.out.println("Good");
-            }
-            else if (marks>0 && marks<=50)
-            {
-                System.out.println("Bad");
-            }
-            else {
-                System.out.println("Invalid");
-            }
-
-            System.out.println("Want to continue? - yes(1) : No(0)  ");
-            input = sc.nextInt();
-
-        }while(input == 1);
-    }
-}
-*/
-
-
-/*
-import java.util.*;
-class Solutions {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter the number : ");
-        int n = sc.nextInt();
-
-        boolean isPrime = true;
-        for(int i=2; i<=n/2; i++) {
-            if(n % i == 0) {
-                isPrime = false;
-                break;
-            }
-        }
-
-
-        if(isPrime) {
-            if(n == 1) {
-                System.out.println("This is neither prime not composite");
-            } else {
-                System.out.println("This is a prime number");
-            }
-        } else {
-            System.out.println("This is not a prime number");
-        }
-    }
-}
-*/
-
-
-//*********************************** Pattern's ****************************************************
-
-/*
-import java.util.*;
-class Pattern {
-    public static void main(String[] args){
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter the vertical no. of stars : ");
-        int n = sc.nextInt();
-        System.out.print("Enter the horizontal no. of stars : ");
-        int m = sc.nextInt();
-        for(int i=0;i<n;i++){
-            for(int j = 0; j<m ;j++) {
-                System.out.print("*");
-            }
-            System.out.println(".");
-        }
-    }
-}
-*/
-
-
-/*
-import java.util.*;
-class Pattern {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter the vertical no. of stars : ");
-        int n = sc.nextInt();
-        System.out.print("Enter the horizontal no. of stars : ");
-        int m = sc.nextInt();
-        for(int i=1 ; i<=n ; i++ ){
-            for(int j = 1 ; j<=m ;j++){
-                if(i==1 || j == 1 || i == n || j == m) {
-                    System.out.print("*");
-                }
-                else{
-                    System.out.print(".");
-                }
-            }
-            System.out.println(".");
-        }
-    }
-}
-*/
-
-
-/*
-import java.util.*;
-class Pattern {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter the  no. of stars : ");
-        int n = sc.nextInt();
-
-        for(int i = 1 ; i<=n ; i++){
-            for(int j=1 ; j<=i  ; j++){
-                System.out.print("*");
-            }
-            System.out.println(".");
-        }
-    }
-}
-*/
-
-
-/*
-import java.util.*;
-class Pattern {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter the  no. of stars : ");
-        int n = sc.nextInt();
-
-        for (int i = 1 ; i <=n ; i++){
-            for(int j = 1 ; j<=n-i; j++){
-                System.out.print("*");
-            }
-            System.out.println(".");
-        }
-    }
-}
-
-
-              // or //
-
-import java.util.*;
-class Pattern {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter the  no. of stars : ");
-        int n = sc.nextInt();
-        for(int i = n ; i>=1 ; i--){
-            for(int j = 1 ; j<=i;j++){
-                System.out.print("*");
-            }
-            System.out.println(".");
-        }
-    }
-}
-
-*/
-
-
-
-/*
-import java.util.*;
-class Pattern {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter the  no. of stars : ");
-        int n = sc.nextInt();
-
-        for (int i = 1; i <= n; i++) {
-            for(int j = 1 ; j<=n-i ; j++) {
-                System.out.print(" ");
-            }
-            for (int j = 1 ; j<=i ; j++){
-                System.out.print("*");
-            }
-            System.out.println(" ");
-        }
-    }
-}
- */
-
-
-/*
-import java.util.*;
-class Pattern {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter the  no. of stars : ");
-        int n = sc.nextInt();
-
-        for (int i= n ; i >= 1 ; i-- ){
-            for(int j = 1 ; j <= i; j++){
-                System.out.print(j);
-            }
-            System.out.println(" ");
-        }
-    }
-}
-*/
-
-/*
-import java.util.*;
-class Pattern {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter the  no. of stars : ");
-        int n = sc.nextInt();
-        int number = 1 ;
-        for (int i= 1 ; i <= n ; i++ ){
-            for(int j = 1 ; j <= i; j++){
-                System.out.print( number + " "  );
-                number++;
-            }
-            System.out.println(" ");
-        }
-    }
-}
-*/
-
-
-/*
-import java.util.*;
-class Pattern {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter the  no. of stars : ");
-        int n = sc.nextInt();
-        for (int i= 1 ; i <= n ; i++ ){
-            for(int j = 1 ; j <= i; j++){
-                if((i+j)%2==0){
-                System.out.print(1 + " ");
-                }
-                else {
-                    System.out.print(0 + " ");
-                }
-            }
-            System.out.println(" ");
-        }
-    }
-}
- */
-
-// Adanced Patterns   ..........................
-
-
-import java.util.*;
-class Pattern {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter the  no. of stars : ");
-        int n = sc.nextInt();
-
-        for (int i = 1 ; i <=n ; i++ ){
-            for(int j = 1 ; j<=i ;j++){
-                System.out.print("*");
-            }
-            for (int j = 2*(n-i) ; j >= 1 ; j--){
-                System.out.print(".");
-            }
-            System.out.println(" ");
-        }
-    }
-}
-
-
-
